@@ -45,7 +45,7 @@ case "$(uname -s)" in
     #fi
     echo 'Install essential packages'
     sudo apt-get update
-    sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common ruby-build rbenv openssl
+    sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl1.0-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common ruby-build rbenv openssl
     rbenv -v
     if [ $? -ne 0 ]; then
         echo 'Install rbenv'
