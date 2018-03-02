@@ -8,6 +8,8 @@ Tested on Linux, OS X (in progress).
 * gluster server
 * ruby (version: 2.3.3)
 * sudo privileges **"without password"** [(see here)](http://askubuntu.com/questions/147241/execute-sudo-without-password)
+* git
+
 
 ## Install
 
