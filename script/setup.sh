@@ -2,7 +2,7 @@
 
 # Install bower, bundler, packages
 function install {
-  npm install bower
+  npm install -g bower
   bower install --allow-root
   gem install bundler
   bundle install
@@ -44,8 +44,9 @@ case "$(uname -s)" in
     #  apt-get install sshpass
     #fi
     echo 'Install essential packages'
+    curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
     sudo apt-get update
-    sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl1.0-dev libreadline-dev libyaml-dev libsqite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common ruby-build rbenv openssl ruby2.3-dev nodejs
+    sudo apt-get install -y build-essential git-core curl zlib1g-dev build-essential libssl1.0-dev libreadline-dev libyaml-dev libsqite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common ruby-build rbenv openssl ruby2.3-dev nodejs
     rbenv -v
     if [ $? -ne 0 ]; then
         echo 'Install rbenv'
